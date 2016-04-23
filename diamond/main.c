@@ -38,3 +38,7 @@ zn@zn-OptiPlex-9010:~/demo/042316/diamond$ ./a.out 4 2 1 '#'
       #####
         #
 #endif
+#if 0
+作业:编写一个函数diamond(),打印一个菱形，其高度，宽度，实心或者空心以及图案字符，
+均可通过参数设置，分别封装为静态库libdiamond_static.a和动态库libdiamond_shared.so，并调用之。
+#endif
