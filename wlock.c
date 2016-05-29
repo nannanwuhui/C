@@ -13,6 +13,8 @@ int main(int argc,char* argv[]){
         fprintf(stderr,"用法:%s <字符串>\n",argv[0]);
         return -1;
     }
+    //这里有O_APPEND,所以两个进程同时写文件的时候不会覆盖，而是搀和在一起了
+    //如果没有O_APPEND的话，就会发生覆盖
     int fd = open("wlock.txt",O_WRONLY | O_CREAT | O_APPEND,0664);
     if(fd == -1){
         perror("open");
